@@ -324,11 +324,104 @@ yearsUntilRetirement(1986, 'Jane')
 
 /*********
  * Function Expressions
- */
 
+//function declaration
+//function whatDoYouDo(job, firstName)
+
+
+ //function expression
+ var whatDoYouDo = function(job, firstName) {
+    switch(job){
+        case 'teacher':
+            return firstName + ' teaches kids how to code';
+        case 'driver':
+            return firstName + ' drives people around';
+        case 'designer':
+            return firstName + ' designs cloths';
+        default:
+            return firstName + ' does something else';
+
+    }
+ }
+
+ console.log(whatDoYouDo('teacher', 'John'));
+ console.log(whatDoYouDo('driver', 'MIke'));
+ console.log(whatDoYouDo('designer', 'Kim'));
+
+/*******
+ * Arrays
  
 
+ // Initialize new array
+ var names = ['John', 'Mark', "Jane"];
+ var years = new Array(1990, 1969, 1948);
 
+console.log(names[1]);
+console.log(years[1]);
+console.log(names[1] + (' was born in ') + years[1]);
+console.log(names.length);
+console.log(names);
+
+// Mutate array data
+names[1] = 'Ben';
+console.log(names)
+
+names[5] = 'Mary';
+console.log(names);
+
+// Different Data types
+
+var john = ['John', 'Smith', 1990, 'designer',
+false];
+
+john.push('blue');
+john.unshift('Mr.');
+console.log(john);
+
+john.pop();
+john.pop();
+john.shift();
+console.log(john);
+
+console.log(john.indexOf(23));
+
+var isDesigner = john.indexOf('designer') === -1 ? 'John is not a designer' : 'John is a designer';
+console.log(isDesigner);
+
+/*****
+ * Coding Challenge 3
+ */
+
+
+var tip = function(billAmount){
+    if(billAmount < 50){
+        return billAmount * .20;
+    } 
+    else if (billAmount > 50 && billAmount < 200){
+        return billAmount * .15;
+    } 
+    else {
+       return billAmount * .10;
+    }   
+}
+console.log(tip(10));
+
+/*var firstBill = 124;
+var secondBill = 48;
+var thirdBill = 268; 
+
+var allTips = [tip(firstBill), tip(secondBill), tip(thirdBill)]
+console.log(allTips);
+
+var allBills = [firstBill + allTips[0], secondBill + allTips[1], thirdBill + allTips[2]]
+console.log(allBills);
+
+*/
+var bills = [124, 48, 268];
+var tips = [tip(bills[0]), tip(bills[1]), tip(bills[2])];
+
+console.log(tips)
+console.log(bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]);
 
 
 
