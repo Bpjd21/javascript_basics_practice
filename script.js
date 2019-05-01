@@ -180,7 +180,7 @@ if (age < 13) {
 
 /******************
  * The Ternary Operator and Switch Statements 
- */
+ 
 
 var firstName = 'John';
 var age = 14;
@@ -224,3 +224,121 @@ switch (true)
     default:
         console.log(firstName + ' is a man.');
 }
+
+/******
+ * 
+ 
+
+ var height;
+
+ height = 0;
+
+ if (height || height === 0) {
+     console.log('Variable is defined');
+ }else {
+     console.log('Variable has NOT been defined')
+ }
+
+// Equality Operators
+
+if (height = '23'){
+    console.log('The == operator does type coercion');
+}
+
+
+var johnAverage
+var mikeAverage;
+
+johnAverage = ((116 + 121 + 123) / 3);
+console.log(johnAverage);
+
+mikeAverage = ((116 + 94 + 123) / 3);
+console.log(mikeAverage);
+
+maryAverage = ((155 + 134 + 105) / 3);
+console.log(maryAverage);
+
+switch (true) {
+    case (johnAverage > mikeAverage):
+    console.log('John\'s team wins with average of: ' + johnAverage);
+    break;
+    case (johnAverage < mikeAverage):
+    console.log('Mike\'s team wins with average of: ' + mikeAverage);
+    break;
+    case (johnAverage === mikeAverage):
+    console.log('Both teams win with a tie')
+    break;
+    default:
+    console.log('we have an error')
+    break;
+}
+
+if (johnAverage > mikeAverage && johnAverage > maryAverage) {
+    console.log('John\'s team wins');
+} else if (mikeAverage > johnAverage && mikeAverage > maryAverage) {
+    console.log('Mike\'s team wins');
+} else if (maryAverage > johnAverage && maryAverage > mikeAverage) {
+    console.log('Mary\'s team wins');
+} else {
+    console.log('There is a draw')
+}
+
+/*if (johnAverage > mikeAverage){
+    console.log('John\'s team wins with ' + johnAverage)
+} else if (mikeAverage > johnAverage){
+    console.log('Mike\'s team wins with ' + mikeAverage)
+} else {
+    console.log('There is a draw')
+} 
+*/
+
+/**********
+ * Functions
+ 
+   
+function calculateAge(birthYear) {
+    return 2018 - birthYear;
+}
+
+var ageJohn = calculateAge(1990);
+var ageMike = calculateAge(1948);
+var ageJane = calculateAge(1968);
+
+console.log(ageJohn, ageJane, ageMike);
+
+function yearsUntilRetirement(year, firstName) {
+    var age = calculateAge(year);
+    var retirement = 65 - age;
+
+    if (retirement > 0){
+        console.log(firstName + ' retires in ' + retirement + ' years.')
+    } else {
+        console.log(firstName + ' is already retired');
+    }
+
+}
+
+yearsUntilRetirement(1990, 'John')
+yearsUntilRetirement(1923, 'Mike')
+yearsUntilRetirement(1986, 'Jane')
+
+/*********
+ * Function Expressions
+ */
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
